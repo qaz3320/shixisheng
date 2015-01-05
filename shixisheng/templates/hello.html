@@ -1,0 +1,35 @@
+
+<meta charset="utf-8">
+<!DOCTYPE html>
+<html>
+<head><!-- CDN hosted by Cachefly -->
+<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+<script>tinymce.init({selector:'textarea'});</script>
+</head>
+<body>
+
+</body>
+<html>
+
+
+<h1>hello</h1>
+{{ab}}
+<br>
+{{date}}
+<br>
+<br>
+{%for a in all%}</p>
+{{a.id}} | {{a.name}} | {{a.address}} | {{a.count}} | {{a.date}}</p>
+<div>{{a.content|safe}}</div>
+{%endfor%}</p>
+{%for a in all_image%}
+<img src="/media/{{a.img}}"/>
+{%endfor%}
+<form action="/new" method="POST">
+{%csrf_token%}
+<img src="/static/2841_530090_717987.jpg"/></p>
+<input type="text" name="name"/>
+<input type="text" name="address"/>
+<textarea name="content"></textarea>
+<button> send <button>	
+</form>
